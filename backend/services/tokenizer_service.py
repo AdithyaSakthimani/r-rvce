@@ -26,4 +26,17 @@ class tokenizer_service:
             ],
         )
         return str(completion.choices[0].message)
+    @staticmethod
+    def add_inference(question_text: str):
+        completion = client.chat.completions.create(
+            model="deepseek-ai/DeepSeek-V3.2:novita",
+            messages=[
+                {
+                    "role": "user",
+                    "content": question_text
+                }
+            ],
+        )
+
+        return str(completion.choices[0].message)
 
