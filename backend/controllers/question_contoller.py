@@ -14,3 +14,8 @@ def create_question():
 @question_bp.route("/test/<testname>", methods=["GET"])
 def get_questions(testname):
     return QuestionService.get_test_questions(testname)
+
+@question_bp.route("/add-marks", methods=["POST"])
+def add_student_marks():
+    return QuestionService.add_student_marks()
+
