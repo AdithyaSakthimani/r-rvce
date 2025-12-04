@@ -1,6 +1,6 @@
 import datetime
 from pymongo import MongoClient
-from  constants import MONGODB_URI, DATABASE_NAME
+from utils.constants import MONGODB_URI, DATABASE_NAME
 
 
 class MongoDB:
